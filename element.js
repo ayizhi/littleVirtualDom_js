@@ -50,5 +50,3 @@ var ul = el('ul',{id:'list'},[
 
 var ulList = ul.render();
 document.body.appendChild(ulList);
-
-

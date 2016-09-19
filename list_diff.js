@@ -25,7 +25,8 @@
 	var TEXT = 3
 **/
 
-function diff (oldList,newList,key){
+
+function diffCurrent (oldList,newList,key){
 	var oldMap = makeKeyIndexAndFree(oldList,key);
 	var newMap = makeKeyIndexAndFree(newList,key);
 
@@ -142,6 +143,8 @@ function diff (oldList,newList,key){
 function makeKeyIndexAndFree(list,key){
 	var keyIndex = {};
 	var free = [];
+	console.log(list,key)
+
 	for(var i=0,len=list.length;i<len;i++){
 		var item = list[i];
 		var itemKey = getItemKey(item,key);
@@ -151,6 +154,12 @@ function makeKeyIndexAndFree(list,key){
 			free.push(item);
 		}
 	}
+
+	console.log('=====')
+	console.log({
+		keyIndex: keyIndex,
+		free: free,
+	})
 
 	return{
 		keyIndex: keyIndex,
@@ -163,7 +172,19 @@ function getItemKey(item,key){
 	return typeof key === 'string' ? item[key] : key(item)
 }
 
-exports.makeKeyIndexAndFree = makeKeyIndexAndFree // exports for test
-exports.diff = diff
 
+var ul = el('ul',{id:'list'},[
+	el('li',{class:'item'},['Item 1']),
+	el('li',{class:'item'},['Item 2']),
+	el('li',{class:'item'},['Item 3']),
+])
 
+var ulNew = el('ul',{id:'list'},[
+	el('li',{class:'item'},['Item 2']),
+	el('li',{class:'item'},['Item 1']),
+	el('li',{class:'item'},['Item 3']),
+])
+
+var end = diff(ul,ulNew,0)
+
+console.log(end)

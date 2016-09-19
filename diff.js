@@ -13,8 +13,9 @@ function dfIterator(oldNode,newNode,index,patches){
     if(oldNode === newNode){
         return
     }
-    //对比新旧节点的不同并且记录下来;
-    patches[index] = [];//此处需要列表对比算法
+    var moves = diffCurrent(oldNode,newNode,index)
+    patches[index] = moves;
+    console.log(patches)
 
     //遍历子节点
     diffChildren(oldNode.children,newNode.children,index,patches)
