@@ -61,16 +61,18 @@ function listDiff(oldList,newList,key){
 	var simulateList = children.slice(0);//slice对children的深度遍历
 	//将得到的新数组去null
 	//也就是只保留新老数组相同的部分,与 free之类
-	// remove items no longer exist
-	var i = 0
-	while (i < simulateList.length) {
-		if (simulateList[i] === null) {
-			remove(i)
-			removeSimulate(i)
-		} else {
-			i++
+
+
+	(function(){
+		for(var i= 0,len=simulateList.length;i<len;i++){
+			if(simulateList[i] === null){
+				remove(i);
+				removeSimulate(i);
+				i--;
+			}
 		}
-	}
+	})();
+
 
 
 
