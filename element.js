@@ -42,11 +42,5 @@ function el(tagName,props,children){
  * 即可转化成
  * **/
 
-var ul = el('ul',{id:'list'},[
-    el('li',{class:'item'},['Item 1']),
-    el('li',{class:'item'},['Item 2']),
-    el('li',{class:'item'},['Item 3']),
-])
 
-var ulList = ul.render();
-document.body.appendChild(ulList);
+module.exports = Element;
