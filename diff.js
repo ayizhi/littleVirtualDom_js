@@ -13,9 +13,7 @@ function dfIterator(oldNode,newNode,index,patches){
     if(oldNode === newNode){
         return
     }
-    var moves = diffCurrent(oldNode,newNode,index)
-    patches[index] = moves;
-    console.log(patches)
+    //var moves = diffCurrent(oldNode,newNode,index)
 
     //遍历子节点
     diffChildren(oldNode.children,newNode.children,index,patches)

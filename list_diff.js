@@ -1,190 +1,146 @@
-/**	
-*	react 中有自己的算法使diff这个时间复杂度为O(n^3)转为O(n) , 感觉有些取巧
-*	主要通过：
-*	1,分层对比
-*	2,基于key来匹配
-*	3,基于自定义元素做优化
-**/
-
-
 /**
-	@param {Array} oldList
-	@param {Array} newList
-	@return {Object} - {moves : <Array>}
-					 - a list of actions that tell how to remove and insert
-					 即返回的是操作步骤，结合下面的操作种类，结合patches即可完成操作
-**/
+ * Diff two list in O(N).
+ * @param {Array} oldList - Original List
+ * @param {Array} newList - List After certain insertions, removes, or moves
+ * @return {Object} - {moves: <Array>}
+ *                  - moves is a list of actions that telling how to remove and insert
+ */
+function listDiff (oldList, newList, key) {
+	var oldMap = makeKeyIndexAndFree(oldList, key)
+	var newMap = makeKeyIndexAndFree(newList, key)
 
+	var newFree = newMap.free
 
-/**
-	我们定义了几种差异类型：
+	var oldKeyIndex = oldMap.keyIndex
+	var newKeyIndex = newMap.keyIndex
 
-	var REPLACE = 0
-	var REORDER = 1
-	var PROPS = 2
-	var TEXT = 3
-**/
+	var moves = []
 
+	// a simulate list to manipulate
+	var children = []
+	var i = 0
+	var item
+	var itemKey
+	var freeIndex = 0
 
-function diffCurrent (oldList,newList,key){
-	var oldMap = makeKeyIndexAndFree(oldList,key);
-	var newMap = makeKeyIndexAndFree(newList,key);
-
-	var newFree = newMap.free;
-
-	var oldKeyIndex = oldMap.keyIndex;
-	var newKeyIndex = newMap.keyIndex;
-
-	var moves = [];
-
-	var children = [];
-	var i = 0;
-	var item;
-	var itemKey;
-	var freeIndex = 0;
-
-
-	while(i<oldList.length){
-		item = oldList[i];
-		itemKey = getItemKey(item,key);
-		if(itemKey){
-			if(!newKeyIndex.hasOwnProperty(itemKey)){
-				children.push(null);
-			}else{
-				var newItemIndex = newKeyIndex[itemKey];
-				children.push(newList[newItemIndex]);
+	// fist pass to check item in old list: if it's removed or not
+	while (i < oldList.length) {
+		item = oldList[i]
+		itemKey = getItemKey(item, key)
+		if (itemKey) {
+			if (!newKeyIndex.hasOwnProperty(itemKey)) {
+				children.push(null)
+			} else {
+				var newItemIndex = newKeyIndex[itemKey]
+				children.push(newList[newItemIndex])
 			}
-		}else{
-			var freeItem = newFree[freeIndex++];
+		} else {
+			var freeItem = newFree[freeIndex++]
 			children.push(freeItem || null)
 		}
 		i++
 	}
 
-	var simulateList = children.slice(0);
+	var simulateList = children.slice(0)
+	console.log(simulateList)
 
-	i = 0;
 
-	//删除不再存在的item
-	while(i<simulateList.length){
-		if(simulateList[i] == null){
-			remove(i);
+
+	// remove items no longer exist
+	i = 0
+	while (i < simulateList.length) {
+		if (simulateList[i] === null) {
+			remove(i)
 			removeSimulate(i)
-		}else{
+		} else {
 			i++
 		}
 	}
 
-	// i 是对newlist中item的指针
-	// j 是对simulateList中item的指针
-	var j = i = 0;
-	while(i < newList.length){
-		item = newList[i];
-		itemKey = getItemKey(item,key);
+	// i is cursor pointing to a item in new list
+	// j is cursor pointing to a item in simulateList
+	var j = i = 0
+	while (i < newList.length) {
+		item = newList[i]
+		itemKey = getItemKey(item, key)
 
-		var simulateItem = simulateList[j];
-		var simulateItemKey = getItemKey(simulateItem,key);
+		var simulateItem = simulateList[j]
+		var simulateItemKey = getItemKey(simulateItem, key)
 
-		if(simulateItem){
-			if(itemKey === simulateItemKey){
+		if (simulateItem) {
+			if (itemKey === simulateItemKey) {
 				j++
-			}else{
-				//new item , just insert it
-				if(!oldKeyIndex.hasOwnProperty(itemKey)){
-					insert(i,item)
-				}else{
+			} else {
+				// new item, just inesrt it
+				if (!oldKeyIndex.hasOwnProperty(itemKey)) {
+					insert(i, item)
+				} else {
 					// if remove current simulateItem make item in right place
 					// then just remove it
-					var nextItemKey = getItemKey(simulateList[j+1],key);
-					if(nextItemKey === itemKey){
-						remove(i);
-						removeSimulate(j);
-						j++
-					}else{
-						insert(i,item)
+					var nextItemKey = getItemKey(simulateList[j + 1], key)
+					if (nextItemKey === itemKey) {
+						remove(i)
+						removeSimulate(j)
+						j++ // after removing, current j is right, just jump to next one
+					} else {
+						// else insert item
+						insert(i, item)
 					}
 				}
 			}
-		}else{
-			insert(i,item)
+		} else {
+			insert(i, item)
 		}
-		
+
 		i++
 	}
 
-
-
-
-	function remove(index){
-		var move = {index: index,type: 0}
+	function remove (index) {
+		var move = {index: index, type: 0}
 		moves.push(move)
 	}
 
-	function insert(index,item){
-		var move = {index: index,item: item,type:1}
+	function insert (index, item) {
+		var move = {index: index, item: item, type: 1}
+		moves.push(move)
 	}
 
-	function removeSimulate(index){
-		simulateList.splice(index,1);
+	function removeSimulate (index) {
+		simulateList.splice(index, 1)
 	}
 
 	return {
 		moves: moves,
 		children: children
 	}
-
 }
 
 /**
-	* 把list转化为key－item的obj
-	* @param{Array} list
-	* @param{String|Function} key
-**/
-function makeKeyIndexAndFree(list,key){
-	var keyIndex = {};
-	var free = [];
-	console.log(list,key)
-
-	for(var i=0,len=list.length;i<len;i++){
-		var item = list[i];
-		var itemKey = getItemKey(item,key);
-		if(itemKey){
-			keyIndex[itemKey] = i;
-		}else{
-			free.push(item);
+ * Convert list to key-item keyIndex object.
+ * @param {Array} list
+ * @param {String|Function} key
+ */
+function makeKeyIndexAndFree (list, key) {
+	var keyIndex = {}
+	var free = []
+	for (var i = 0, len = list.length; i < len; i++) {
+		var item = list[i]
+		var itemKey = getItemKey(item, key)
+		if (itemKey) {
+			keyIndex[itemKey] = i
+		} else {
+			free.push(item)
 		}
 	}
-
-	console.log('=====')
-	console.log({
+	return {
 		keyIndex: keyIndex,
-		free: free,
-	})
-
-	return{
-		keyIndex: keyIndex,
-		free: free,
+		free: free
 	}
 }
 
-function getItemKey(item,key){
-	if(!item || !key) return void 2333 //void是javascript中定义的一个操作符void后面跟一个表达式，void操作符会立即执行后面的表达式，并且统一返回undefined
-	return typeof key === 'string' ? item[key] : key(item)
+function getItemKey (item, key) {
+	if (!item || !key) return void 666
+	return typeof key === 'string'
+		? item[key]
+		: key(item)
 }
-
-
-var ul = el('ul',{id:'list'},[
-	el('li',{class:'item'},['Item 1']),
-	el('li',{class:'item'},['Item 2']),
-	el('li',{class:'item'},['Item 3']),
-])
-
-var ulNew = el('ul',{id:'list'},[
-	el('li',{class:'item'},['Item 2']),
-	el('li',{class:'item'},['Item 1']),
-	el('li',{class:'item'},['Item 3']),
-])
-
-var end = diff(ul,ulNew,0)
-
-console.log(end)

@@ -8,8 +8,26 @@
 
 </body>
 <script src="element.js"></script>
-<script src="element.js"></script>
-<script src="diff.js"></script>
 <script src="list_diff.js"></script>
-<script></script>
+<script>
+
+    var oldList = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
+    var newList = [{id: "c"}, {id: "a"}, {id: "b"}, {id: "e"}, {id: "f"}]
+
+    var moves = listDiff(oldList,newList,'id');
+
+    console.log(moves)
+    // `moves` is a sequence of actions (remove or insert):
+    // type 0 is removing, type 1 is inserting
+    // moves: [
+    //   {index: 3, type: 0},
+    //   {index: 0, type: 1, item: {id: "c"}},
+    //   {index: 0, type: 0},
+    //   {index: 4, type: 1, item: {id: "f"}}
+    //  ]
+
+</script>
+
+
+
 </html>
