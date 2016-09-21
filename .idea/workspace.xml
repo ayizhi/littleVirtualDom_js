@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb31f6d6-40a5-4b03-ad93-585f6699969e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/element.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/diff.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/element.js" afterPath="$PROJECT_DIR$/element_simple.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/patch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/util.js" afterPath="$PROJECT_DIR$/lib/util.js" />
     </list>
     <ignored path="virtual_dom_demo_js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,14 +44,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="element.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="element.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/element.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-              <folding>
-                <marker date="1474426096000" expanded="true" signature="1225:1391" ph="{...}" />
-              </folding>
+            <state relative-caret-position="483">
+              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="patch.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/patch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,6 +108,7 @@
         <option value="$PROJECT_DIR$/element.js" />
         <option value="$PROJECT_DIR$/lib/util.js" />
         <option value="$PROJECT_DIR$/lib/element.js" />
+        <option value="$PROJECT_DIR$/lib/patch.js" />
       </list>
     </option>
   </component>
@@ -265,15 +270,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1474210487945</updated>
-      <workItem from="1474374978618" duration="5201000" />
+      <workItem from="1474374978618" duration="5682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5201000" />
+    <option name="totallyTimeSpent" value="5682000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="705" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="705" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25099286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -385,11 +390,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/element.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding>
-            <marker date="1474426096000" expanded="true" signature="1225:1391" ph="{...}" />
-          </folding>
+        <state relative-caret-position="483">
+          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/patch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
