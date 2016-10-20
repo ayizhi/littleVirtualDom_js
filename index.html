@@ -7,16 +7,24 @@
 <body>
 
 </body>
-<script src="element_simple.js"></script>
-<script src="list_diff.js"></script>
+<script type="text/javascript" src='simple-virtual-dom.js'></script>
 <script>
+    var domTree = new Element(
+        'ul',
+        {'class':'box','num':12},
+        children:[
+            '123123123'
+        ]
+        )
+    
 
-    var oldList = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
-    var newList = [{id: "c"}, {id: "a"}, {id: "b"}, {id: "e"}, {id: "f"}]
 
-    var moves = listDiff(oldList,newList,'id');
+    // var oldList = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
+    // var newList = [{id: "c"}, {id: "a"}, {id: "b"}, {id: "e"}, {id: "f"}]
 
-    console.log(moves)
+    // var moves = listDiff(oldList,newList,'id');
+
+    // console.log(moves)
     // `moves` is a sequence of actions (remove or insert):
     // type 0 is removing, type 1 is inserting
     // moves: [
