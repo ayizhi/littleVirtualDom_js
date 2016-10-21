@@ -7,33 +7,22 @@
 <body>
 
 </body>
-<script type="text/javascript" src='simple-virtual-dom.js'></script>
+<!--<script type="text/javascript" src="simple-virtual-dom.js"></script>-->
+<script src="./lib/util.js"></script>
+<script src="./lib/element.js"></script>
 <script>
-    var domTree = new Element(
-        'ul',
-        {'class':'box','num':12},
-        children:[
-            '123123123'
-        ]
-        )
-    
+
+    var tree = Element('div',{'id':'container'},[
+            Element('h1',{'class':'title','style':'color:red'},['simple-virtual-dom']),
+            Element('p',['Hello , world']),
+            Element('ul',[Element('li')])
+    ])
 
 
-    // var oldList = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
-    // var newList = [{id: "c"}, {id: "a"}, {id: "b"}, {id: "e"}, {id: "f"}]
+    var treeNode = tree.render(document.body)
 
-    // var moves = listDiff(oldList,newList,'id');
 
-    // console.log(moves)
-    // `moves` is a sequence of actions (remove or insert):
-    // type 0 is removing, type 1 is inserting
-    // moves: [
-    //   {index: 3, type: 0},
-    //   {index: 0, type: 1, item: {id: "c"}},
-    //   {index: 3, type: 0},
-    //   {index: 4, type: 1, item: {id: "f"}}
-    //  ]
-
+    var newTree = Element('')
 </script>
 
 
