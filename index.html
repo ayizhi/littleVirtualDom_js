@@ -7,10 +7,16 @@
 <body>
 
 </body>
-<!--<script type="text/javascript" src="simple-virtual-dom.js"></script>-->
 <script src="./lib/util.js"></script>
 <script src="./lib/element.js"></script>
+<script src="./lib/list_diff.js"></script>
+<script src="./lib/diffs.js"></script>
 <script>
+
+    var oldList = [{id:'a'},{id:'b'},{id:'c'},{id:'d'},{id:'e'}]
+    var newList = [{id:'c'},{id:'a'},{id:'b'},{id:'c'},{id:'f'},{id:'g'}]
+    var moves = listDiff(oldList,newList)
+    console.log('list-diff算法返回:',moves)
 
     var tree = Element('div',{'id':'container'},[
             Element('h1',{'class':'title','style':'color:red'},['simple-virtual-dom']),
@@ -21,8 +27,6 @@
 
     var treeNode = tree.render(document.body)
 
-
-    var newTree = Element('')
 
 
 
