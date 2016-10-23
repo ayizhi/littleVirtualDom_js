@@ -11,12 +11,12 @@
 <script src="./lib/element.js"></script>
 <script src="./lib/list_diff.js"></script>
 <script src="./lib/diffs.js"></script>
+<script src="./lib/patch.js"></script>
 <script>
 
     var oldList = [{id:'a'},{id:'b'},{id:'c'},{id:'d'},{id:'e'}]
     var newList = [{id:'c'},{id:'a'},{id:'b'},{id:'c'},{id:'f'},{id:'g'}]
     var moves = listDiff(oldList,newList)
-    console.log('list-diff算法返回:',moves)
 
     var tree = Element('div',{'id':'container'},[
             Element('h1',{'class':'title','style':'color:red'},['simple-virtual-dom']),
