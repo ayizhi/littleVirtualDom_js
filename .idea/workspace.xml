@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb31f6d6-40a5-4b03-ad93-585f6699969e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/simple-virtual-dom.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/diffs.js" afterPath="$PROJECT_DIR$/lib/diffs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/list_diff.js" afterPath="$PROJECT_DIR$/lib/list_diff.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/patch.js" afterPath="$PROJECT_DIR$/lib/patch.js" />
     </list>
     <ignored path="virtual_dom_demo_js.iws" />
@@ -62,8 +56,8 @@
       <file leaf-file-name="patch.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/patch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+            <state relative-caret-position="449">
+              <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -279,12 +273,12 @@
       <updated>1474210487945</updated>
       <workItem from="1474374978618" duration="12950000" />
       <workItem from="1477017309647" duration="12603000" />
-      <workItem from="1477114115380" duration="5582000" />
+      <workItem from="1477114115380" duration="5733000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31135000" />
+    <option name="totallyTimeSpent" value="31286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="705" extended-state="0" />
@@ -452,8 +446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/patch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+        <state relative-caret-position="449">
+          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
           <folding />
         </state>
       </provider>
