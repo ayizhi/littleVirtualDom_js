@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb31f6d6-40a5-4b03-ad93-585f6699969e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/diffs.js" afterPath="$PROJECT_DIR$/lib/diffs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/patch.js" afterPath="$PROJECT_DIR$/lib/patch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/list_diff.js" afterPath="$PROJECT_DIR$/lib/list_diff.js" />
     </list>
     <ignored path="virtual_dom_demo_js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -45,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="diffs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="diffs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/diffs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+            <state relative-caret-position="483">
+              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -80,8 +79,8 @@
       <file leaf-file-name="list_diff.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/list_diff.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="161" column="28" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
+            <state relative-caret-position="-1479">
+              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -110,10 +109,10 @@
         <option value="$PROJECT_DIR$/element.js" />
         <option value="$PROJECT_DIR$/lib/util.js" />
         <option value="$PROJECT_DIR$/lib/element.js" />
-        <option value="$PROJECT_DIR$/lib/list_diff.js" />
         <option value="$PROJECT_DIR$/lib/patch.js" />
-        <option value="$PROJECT_DIR$/lib/diffs.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/lib/list_diff.js" />
+        <option value="$PROJECT_DIR$/lib/diffs.js" />
       </list>
     </option>
   </component>
@@ -128,7 +127,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="46" />
     <option name="width" value="1280" />
     <option name="height" value="705" />
   </component>
@@ -277,15 +276,15 @@
       <updated>1474210487945</updated>
       <workItem from="1474374978618" duration="12950000" />
       <workItem from="1477017309647" duration="12603000" />
-      <workItem from="1477114115380" duration="8591000" />
+      <workItem from="1477114115380" duration="10042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34144000" />
+    <option name="totallyTimeSpent" value="35595000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="705" extended-state="0" />
+    <frame x="0" y="46" width="1280" height="705" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25099286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -426,14 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/list_diff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="161" column="28" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/patch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -442,21 +433,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/diffs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="18" column="24" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/list_diff.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1479">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/diffs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
