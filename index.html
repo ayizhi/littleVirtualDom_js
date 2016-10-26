@@ -21,7 +21,7 @@
     var tree = Element('div',{'id':'container'},[
             Element('h1',{'class':'title','style':'color:red'},['simple-virtual-dom']),
             Element('p',['Hello , world']),
-            Element('ul',[Element('li',['lalalla'])])
+            Element('ul',[Element('li',['lalalla']),Element('li',['hahaha']),Element('li',['xixixix'])])
     ])
 
     var root = tree.render()
@@ -30,15 +30,19 @@
     var newTree = Element('div', {'id': 'container'}, [
         Element('h1', {style: 'color: red'}, ['simple virtal dom']),
         Element('p', ['Hello, virtual-dom']),
-        Element('ul', [Element('li'), Element('li')])
+        Element('ul', [Element('li')])
     ])
 
 
 
-//    var patches = diff(tree, newTree)
+    var patches = diff(tree,newTree)
+
+    console.log(patches)
+
 
 //    console.log(patches)
 //    patch(root, patches)
+
 
 
 
