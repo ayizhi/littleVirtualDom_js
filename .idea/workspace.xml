@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb31f6d6-40a5-4b03-ad93-585f6699969e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/diffs.js" afterPath="$PROJECT_DIR$/lib/diffs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/element.js" afterPath="$PROJECT_DIR$/lib/element.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/list_diff.js" afterPath="$PROJECT_DIR$/lib/list_diff.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/patch.js" afterPath="$PROJECT_DIR$/lib/patch.js" />
     </list>
     <ignored path="virtual_dom_demo_js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,40 +19,50 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/index.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="391">
+                    <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="virtual_dom_demo_js" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="diffs.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="diffs.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/diffs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="61" column="49" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="49" />
+            <state relative-caret-position="287">
+              <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1477467196000" expanded="true" signature="2377:2879" ph="..." />
+                <marker date="1477483239000" expanded="true" signature="1802:2214" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_diff.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list_diff.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/list_diff.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="338">
+              <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -251,15 +259,15 @@
       <updated>1474210487945</updated>
       <workItem from="1474374978618" duration="12950000" />
       <workItem from="1477017309647" duration="12603000" />
-      <workItem from="1477114115380" duration="17970000" />
+      <workItem from="1477114115380" duration="19076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43523000" />
+    <option name="totallyTimeSpent" value="44629000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-319" y="-1057" width="1920" height="1008" extended-state="1" />
+    <frame x="-319" y="-1057" width="1920" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16640337" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -335,7 +343,7 @@
           <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1477467196000" expanded="true" signature="2377:2879" ph="..." />
+            <marker date="1477483239000" expanded="true" signature="1802:2214" ph="..." />
           </folding>
         </state>
       </provider>
@@ -417,22 +425,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/diffs.js">
+    <entry file="file://$PROJECT_DIR$/lib/list_diff.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="49" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1477467196000" expanded="true" signature="2377:2879" ph="..." />
-          </folding>
+        <state relative-caret-position="338">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/list_diff.js">
+    <entry file="file://$PROJECT_DIR$/lib/diffs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="287">
+          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1477483239000" expanded="true" signature="1802:2214" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
