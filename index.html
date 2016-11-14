@@ -14,37 +14,16 @@
 <script src="./lib/diffs.js"></script>
 <script>
 
-//    var oldList = [{id:'a'},{id:'b'},{id:'c'},{id:'d'},{id:'e'}]
-//    var newList = [{id:'c'},{id:'a'},{id:'b'},{id:'c'},{id:'f'},{id:'g'}]
-//    var moves = listDiff(oldList,newList)
-
-    var tree = Element('div',{'id':'container'},[
-            Element('h1',{'class':'title','style':'color:red'},['simple-virtual-dom']),
-            Element('p',['Hello , world']),
-            Element('ul',[Element('li',['lalalla']),Element('li',['hahaha']),Element('li',['xixixix'])])
+var tree = Element('div',{id:'box'},[
+        Element('h1',{class:'title',style:'color:blue;font-size:24px'},['simple virtual dom']),
+        Element('ul',{id:'list'},[
+            Element('li',{class:'li'},['lalalallaa']),
+            Element('li',{class:'li'},['hahahahahaha']),
+            Element('li',{class:'li'},['xixiixiixixix'])
+        ])
     ])
 
-    var root = tree.render()
-
-
-    var newTree = Element('div', {'id': 'container'}, [
-        Element('h1', {style: 'color: red'}, ['simple virtal dom']),
-        Element('p', ['Hello, virtual-dom']),
-        Element('ul', [Element('li')])
-    ])
-
-
-
-    var patches = diff(tree,newTree)
-
-    console.log(patches)
-
-
-//    console.log(patches)
-//    patch(root, patches)
-
-
-
+tree.render()
 
 
 </script>
