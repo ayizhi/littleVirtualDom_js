@@ -5,11 +5,10 @@
 var tree = Element('div',{id:'box'},[
         Element('h1',{key:'h1',class:'title',style:'color:blue;font-size:24px'},['simple virtual dom']),
         Element('ul',{key:'list1',id:'list'},[
-            Element('li',{key:'li1',class:'li'},['lalalallaa']),
-            Element('li',{key:'li2',class:'li'},['hahahahahaha']),
-            Element('li',{key:'li3',class:'li'},['xixiixiixixix'])
-        ])
-    ])
+        Element('li',{key:'li1',class:'li'},['lalalallaa']),
+        Element('li',{key:'li2',class:'li'},['hahahahahaha']),
+        Element('li',{key:'li3',class:'li'},['xixiixiixixix'])
+        ])])
 
 var theRoot = tree.render()
 
@@ -21,10 +20,9 @@ var newTree = Element('div',{id:'box'},[
             Element('li',{key:'li2',class:'li'},['xixiixiixixix']),
             Element('li',{key:'li1',class:'li'},['hahahahahaha']),
             Element('li',{key:'li5',class:'li'},['biubiubiubiu'])
-        ])
-    ])
+            ])])
+
 
 var diffs = diff(tree,newTree)
-
 
 patch(theRoot,diffs)
