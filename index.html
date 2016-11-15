@@ -23,8 +23,22 @@ var tree = Element('div',{id:'box'},[
         ])
     ])
 
-tree.render()
+var theRoot = tree.render()
 
+
+var newTree = Element('div',{id:'box'},[
+        Element('p',{class:'title',style:'color:blue;font-size:24px'},['simple virtual dom']),
+        Element('ul',{id:'list'},[
+            Element('li',{class:'li'},['hahahhahah']),
+            Element('li',{class:'li'},['xixiixiixixix']),
+            Element('li',{class:'li'},['hahahahahaha']),
+            Element('li',{class:'li'},['biubiubiubiu'])
+        ])
+    ])
+
+var diffs = diff(tree,newTree)
+
+patch(theRoot,diffs)
 
 </script>
 
